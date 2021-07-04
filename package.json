@@ -1,0 +1,32 @@
+{
+  "name": "asteroids-part1",
+  "version": "1.0.0",
+  "description": "Typscript Asteroids Game",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgeFromGib/asteroids-part1.git"
+  },
+  "dependencies": {
+    "@types/p5": "0.9.0",
+    "p5": "0.9.0"
+  },
+  "keywords": [
+    "p5js",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgeFromGib/asteroids-part1/issues"
+  },
+  "homepage": "https://github.com/GeorgeFromGib/asteroids-part1#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.3.5"
+  }
+}
