@@ -6,23 +6,23 @@ export class AsteroidsGame {
   _angle:number=0;
 
   constructor() {
-    new P5((p) => sketch(p, this.setup, this.gameLoop));
+    new P5((p5) => sketch(p5, this.setup));
   }
 
   public setup=(p5: P5)=> {
-    // Creating and positioning the canvas
-    const canvas = p5.createCanvas(p5.windowWidth*0.8, p5.windowHeight*0.8);
-    canvas.parent("app");
+    p5.draw=()=>this.gameLoop(p5);
 
-    // Configuring the canvas
-    p5.background("black");
+    // Creating and positioning the canvas
+    const scr_reduction=0.8;
+    const canvas = p5.createCanvas(p5.windowWidth*scr_reduction, p5.windowHeight*scr_reduction);
+    canvas.parent("app");
   }
 
   public gameLoop=(p5: P5)=> {
-    p5.background("black");
+    p5.background(0);
     
     //advance rotation angle
-    this._angle+=p5.PI/90;
+    this._angle+=p5.PI/100;
     
     //Draw the spaceship
     p5.noFill();
